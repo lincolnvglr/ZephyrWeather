@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Zephyr",
+    "slug": "zephyr-weather",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "zephyr",
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Zephyr needs your location to show nearby threats and attach GPS to your reports.",
+        "NSLocationAlwaysUsageDescription": "Zephyr uses your location to alert you to nearby severe weather threats."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#030712",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Zephyr needs your location to show nearby threats."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
